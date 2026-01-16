@@ -6,5 +6,6 @@ int main(){
     int n = vec.size();
     for(int i=0;i<n;i++){
      cout<<"vector:- "<<2*vec[i];
+     cout<<"hello";
     }
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            visibility: hidden;
+        }
+
+        button{
+            width:5rem;
+            height: 3rem;
+        }
+
+        .selected{
+            background-color:#f8f843;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="message">hello world</p>
+
+        <!-- <h1 class="bt">click me</h1>
+    </div> -->
+
+        <div id="box">hgvh
+        </div>
+
+
+        <div>
+            <input type="text" class="take-input" placeholder="name" value="" />
+            <button class="bt-3">Enter</button>
+        </div>
+
+       
+
+        <div >
+            <button class="bt-add">+</button>
+            <span class="number">7</span>
+            <button class="bt-sub">-</button>
+        </div>
+
+         <div>
+            <ul class="b-points">
+                <li class="b-p">cgchgfhfghtfkufyu</li>
+                <li class="b-p">cgchgfhfghtfkufyu</li>
+                <li class="b-p">cgchgfhfghtfkufyu</li>
+                <li class="b-p">ktutfgyhtedytr</li>
+            </ul>
+
+            <button class="bt-4">remove</button>
+        </div>
+
+
+
+        <!-- <button  class="bt-1">show</button>
+    <button class="bt-2">hide</button> -->
+        <script>
+
+
+           let bpoints = document.querySelectorAll(".b-points");
+           console.log(bpoints);
+
+bpoints.forEach(pointGroup => {
+  let children = pointGroup.children;
+
+  for (let i = 0; i < children.length; i++) {
+    children[i].addEventListener("click", function () {
+
+      // remove from all
+      for (let j = 0; j < children.length; j++) {
+        children[j].classList.remove("selected");
+      }
+
+      // add to clicked one
+      this.classList.add("selected");
+    });
+  }
+});
+
+
+
+
+
+            
+            // let bt4 = document.querySelector(".bt-4");
+            // bt4.addEventListener("click", function () {
+            //     let bpoints = document.querySelectorAll(".b-points");
+            //     console.log(bpoints[0].children);
+            //     let a = bpoints[0].children;
+            //     // a[a.length-1].remove();
+            //     for(let i=0;i<a.length;i++){
+            //         console.log(a[i]);
+            //         if(i==a.length-1){
+            //            a[i].remove();
+            //         }
+            //     }
+
+            // })
+
+
+
+
+
+        //   let btadd = document.querySelector(".bt-add");
+        //   let num  = document.querySelector(".number");
+        //   let btsub = document.querySelector(".bt-sub");
+        //   let x=num.textContent;
+        //   let y = btadd.textContent;
+        //    let z = btsub.textContent;
+          
+        //   if(y=="+"){
+        //   btadd.addEventListener("click",function(){
+        //     let incnum=  x++;
+
+        //    num.innerHTML = incnum;
+           
+        //   })
+        // }
+        //  else if(z=="-"){ 
+        //  btsub.addEventListener("click",function(){
+        //     console.log("gyfdtgh");
+        //     let decnum = x--;
+        //     num.innerHTML = decnum;
+        //  })
+        // }
+
+
+
+
+
+
+
+
+            let bt3 = document.querySelector(".bt-3");
+            bt3.addEventListener("click", function () {
+                let txt = document.querySelector(".take-input").value;
+                console.log(txt);
+                let x = document.querySelector(".bpoints");
+                x.innerHTML = `<li>${txt}</li>`;
+
+
+            })
+
+
+
+
+
+
+
+        </script>
+</body>
+
+</html>

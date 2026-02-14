@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0b050e;
+  background: #be92d4;
 }
 
 .calculator {
@@ -17,9 +17,9 @@ body {
   padding: 20px;
   border-radius: 25px;
   background: #f6f7f9;
-  box-shadow:
+  /* box-shadow:
     10px 10px 20px rgba(0, 0, 0, 0.15),
-    -10px -10px 20px rgba(255, 255, 255, 0.8);
+    -10px -10px 20px rgba(255, 255, 255, 0.8); */
 }
 
 .display {
@@ -66,4 +66,5 @@ body {
   background: #e7a6c9;
   color: white;
   font-size: 20px;
+
 }
